@@ -8,4 +8,8 @@ describe Dice do
   it 'allows user to roll dice' do
     expect(subject).to respond_to :roll
   end
+
+  it 'rolling die gives number between 1 and 6' do
+    expect(subject.roll).to be_between(1,6).inclusive
+  end
 end
